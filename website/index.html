@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Raj ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #fff5f9, #ffdce9);
+    color: #64243d;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -50px;
+    font-size: 25px;
+    animation: float 7s linear infinite;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.heart:nth-child(1) { left: 5%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 20%; animation-delay: 2s; }
+.heart:nth-child(3) { left: 40%; animation-delay: 4s; }
+.heart:nth-child(4) { left: 65%; animation-delay: 1s; }
+.heart:nth-child(5) { left: 85%; animation-delay: 3s; }
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 50px auto;
+    background: rgba(255,255,255,0.9);
+    border-radius: 35px;
+    padding: 45px 25px;
+    box-shadow: 0 20px 60px rgba(200, 70, 120, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    color: #ed3f78;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 22px;
+    color: #71304b;
+}
+
+.name {
+    color: #ed3f78;
+    font-weight: bold;
+}
+
+/* Surprise button */
+button {
+    border: none;
+    background: linear-gradient(135deg, #ff4f88, #e9326d);
+    color: white;
+    padding: 18px 35px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 30px 0;
+    box-shadow: 0 10px 25px rgba(230, 50, 110, 0.3);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+/* Surprise section */
+#surprise {
+    display: none;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    color: #ed3f78;
+    font-size: 36px;
+    margin-top: 35px;
+}
+
+.message {
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 20px auto;
+}
+
+/* Cute photo section */
+#secret {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 2px dashed #ff9bbb;
+}
+
+#secret h2 {
+    color: #e83e78;
+    font-size: 38px;
+}
+
+.cute-intro {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+/* Photo */
+.photo-card {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 40px auto;
+}
+
+.polaroid {
+    background: white;
+    padding: 14px 14px 30px;
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 18px 40px rgba(190, 50, 100, 0.25);
+    transform: rotate(-2deg);
+    transition: 0.4s;
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.polaroid img {
+    width: 100%;
+    height: 410px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+.polaroid p {
+    font-family: cursive;
+    color: #792b4a;
+    font-size: 18px;
+    margin: 18px 5px 0;
+}
+
+/* Hearts around photo */
+.photo-heart {
+    position: absolute;
+    font-size: 35px;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+.h1 {
+    left: 18%;
+    top: 30px;
+}
+
+.h2 {
+    right: 18%;
+    top: 80px;
+    animation-delay: .5s;
+}
+
+.h3 {
+    left: 22%;
+    bottom: 30px;
+    animation-delay: 1s;
+}
+
+@keyframes bounce {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+.love-line {
+    font-size: 21px;
+    line-height: 1.8;
+    margin: 40px auto;
+    max-width: 650px;
+}
+
+.story-line {
+    font-size: 23px;
+    margin-top: 45px;
+}
+
+.us-line {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.us-line span {
+    color: #ed3f78;
+}
+
+.final-love {
+    color: #ed3f78;
+    font-size: 43px;
+    font-weight: bold;
+    margin-top: 50px;
+    text-shadow: 0 5px 20px rgba(230, 50, 110, 0.2);
+}
+
+.ending {
+    font-size: 19px;
+    line-height: 1.9;
+    margin-top: 25px;
+}
+
+.forever {
+    color: #ed3f78;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 35px;
+}
+
+.footer {
+    margin-top: 45px;
+    font-size: 15px;
+    color: #a64a6b;
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .polaroid {
+        width: 90%;
+    }
+
+    .polaroid img {
+        height: 350px;
+    }
+
+    .final-love {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<div class="heart">💗</div>
+<div class="heart">💕</div>
+<div class="heart">💖</div>
+<div class="heart">💘</div>
+<div class="heart">💞</div>
+
+<div class="container">
+
+    <h1>Happy Boyfriend Day 💗</h1>
+
+    <p class="subtitle">
+        To my favourite person in the whole world... 🥹
+    </p>
+
+    <p class="subtitle">
+        <span class="name">Raj</span>, this little website is just for you. 🫶🏻
+    </p>
+
+    <button onclick="showSurprise()">
+        💌 Click for your surprise
+    </button>
+
+
+    <!-- SURPRISE -->
+    <div id="surprise">
+
+        <h2 class="section-title">
+            For My Favourite Person 💗
+        </h2>
+
+        <p class="message">
+            Raj, you're not just someone I love...
+            <br>
+            you're my favourite person. 🥹❤️
+        </p>
+
+        <p class="message">
+            My favourite notification 📱💗
+            <br>
+            My favourite smile 😊
+            <br>
+            My favourite memory 🥹
+            <br>
+            And my favourite part of every day. 🌸
+        </p>
+
+        <p class="message">
+            If I could write my feelings as code,
+            it would probably look something like this:
+        </p>
+
+        <p class="message">
+            <b>
+                favourite_person = "RAJ" ❤️
+                <br>
+                favourite_memory = "US" 🥹
+                <br>
+                favourite_future = "TOGETHER" 💕
+            </b>
+        </p>
+
+
+        <!-- PHOTO -->
+        <div id="secret">
+
+            <h2>🥹💗 One More Thing...</h2>
+
+            <p class="cute-intro">
+                I saved one little piece of us here...
+                <br>
+                just for you, Raj. 🫶🏻
+            </p>
+
+            <div class="photo-card">
+
+                <div class="photo-heart h1">💗</div>
+                <div class="photo-heart h2">💕</div>
+                <div class="photo-heart h3">💖</div>
+
+                <div class="polaroid">
+
+                    <!-- YOUR PHOTO -->
+                    <img src="./us.jpg" alt="Our special memory">
+
+                    <p>
+                        My favourite place is wherever
+                        I am with you. 🥹❤️
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <p class="love-line">
+                This isn't just a photo... 🥺
+                <br>
+                it's one of the little moments
+                I wish I could keep forever. 💗
+            </p>
+
+            <p class="story-line">
+                And if my story had a favourite chapter...
+            </p>
+
+            <h3 class="us-line">
+                It would be <span>US. 💕</span>
+            </h3>
+
+
+            <div class="final-love">
+                I LOVE YOU, RAJ ❤️
+            </div>
+
+            <p class="ending">
+                Here's to more silly laughs,
+                random talks, hugs,
+                <br>
+                beautiful memories
+                and a whole lot of <b>US</b>. 🥹🫶🏻
+            </p>
+
+            <div class="forever">
+                ♾️ YOU + ME ♾️
+            </div>
+
+            <div class="footer">
+                Made with love & a little bit of code 💻💗
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function showSurprise() {
+
+    const surprise = document.getElementById("surprise");
+
+    surprise.style.display = "block";
+
+    document.querySelector("button").style.display = "none";
+
+    // Scroll smoothly to surprise
+    setTimeout(function() {
+        surprise.scrollIntoView({
+            behavior: "smooth"
+        });
+    }, 200);
+}
+
+</script>
+
+</body>
+</html>
